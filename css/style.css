@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased
+}
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #F0500C;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFF;
+}
+
+/* Container */
+
+.container {
+    padding: 1.5rem 1rem;
+}
+
+/* .input-box {
+    display: flex;
+    align-items: center;
+    border: 3px solid #ccc
+} */
+
+.input-box input {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    font-size: 1.5rem;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    opacity:0;
+}
+
+.input-box input:focus {
+    border: 4px solid #F0500C;
+    outline: #F0500C;
+}
+
+.selected-bus {
+    padding: 1.5rem 0;
+    font-size: 2.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: .8rem 0;
+    margin-top: 1rem;
+    background-color: #FF6726;
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ícone Bus */
+
+.section-icon {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bus-icon {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #F0500C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+.bus-icon i {
+    font-size: 5rem;
+    color: #FFF;
+    z-index: 10;
+}
+
+.circle {
+    display: block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #F0500C;
+    margin: 10px;
+    transition: 5s ease;
+    position: absolute;
+    top: 0px;
+}
+
+.bus-icon:hover .delay1 {
+    animation: waves 2.5s linear;
+    animation-delay: .1s;
+}
+
+.bus-icon:hover .delay2 {
+    animation: waves 2.5s linear .7s forwards,
+}
+
+.bus-icon:hover .delay3 {
+    animation: waves 2.5s linear 1.3s forwards;
+}
+
+.bus-icon:hover .delay4 {
+    animation: waves 2.5s linear 1.9s forwards;
+}
+
+/* Key frames */
+
+@-webkit-keyframes waves {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto SeeMyBus</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">SeeMyBus</h1>
+    </header>
+
+    <main class="container">
+        <form>
+            <div class="input-box">
+                <input list="buses" name="bus" class="buses" placeholder="Escolha a sua Linha">
+            </div>
+            <datalist id="buses">
+                <option value="Linha 01">
+                <option value="Linha 02">
+                <option value="Linha 03">
+                <option value="Linha 04">
+                <option value="Linha 05">
+                <option value="Linha 06">
+            </datalist>
+
+            <button type="button" class="btn" onclick="selectBus()">
+                Selecionar Linha
+            </button>
+        </form>
+
+        <h3 class="selected-bus"></h3>
+
+        <section class="section-icon">
+            <div class="bus-icon">
+                <i class="ph-bus-fill"></i>
+                <div class="circle delay1"></div>
+                <div class="circle delay2"></div>
+                <div class="circle delay3"></div>
+                <div class="circle delay4"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
